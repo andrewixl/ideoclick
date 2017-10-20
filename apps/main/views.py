@@ -17,3 +17,21 @@ def clients(request):
         "client" : clients,
     }
     return render(request, 'main/client.html', context)
+
+def fulfillment(request):
+    return render(request, 'main/services/fulfillment.html')
+
+def subscriptions(request):
+    return render(request, 'main/services/subscriptions.html')
+
+def estoremonetization(request):
+    return render(request, 'main/services/estoremonetization.html')
+
+def demanddriver(request):
+    return render(request, 'main/services/demanddriver.html')
+
+def itemmonitor(request):
+    return render(request, 'main/services/itemmonitor.html')
+
+def contentmanagement(request):
+    return render(request, 'main/services/contentmanagement.html')
