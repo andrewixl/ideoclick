@@ -1,3 +1,9 @@
+.vertline{
+  border-right: 1px solid black;
+}
+a{
+  color:black;
+}
 .hleft{
   display: inline-block;
   margin-right: 5%;
