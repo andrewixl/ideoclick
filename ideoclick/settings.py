@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l_46=^sc@dz&6k9g@^mbwedm(1#a)3vkv^o=&mt#in15+jaeoh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['34.214.115.157','localhost']
+ALLOWED_HOSTS = ['34.214.115.157','localhost', 'www.ideoclickdemosite.gq', 'ideoclickdemosite.gq']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
