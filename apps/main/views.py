@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Client
 
 def index(request):
-    clients = Client.objects.all().order_by('client_name')[:14]
+    clients = Client.objects.filter(client_type = 'large').all().order_by('client_name')
     context = {
         "client" : clients,
     }

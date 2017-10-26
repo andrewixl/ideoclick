@@ -13,4 +13,4 @@ class Client(models.Model):
         verbose_name_plural = _("Clients")
 
     def __str__(self):
-        return self.client_name
+        return self.client_name + " - " + self.client_type
