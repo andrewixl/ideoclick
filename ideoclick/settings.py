@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['34.214.115.157','localhost', 'www.ideoclickdemosite.gq', 'ideoclickdemosite.gq']
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_URL = '/media/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -117,22 +115,25 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
 
 AWS_STORAGE_BUCKET_NAME = 'ideoclick'
-AWS_S3_REGION_NAME = 'us-west-2'  # e.g. us-east-2
-AWS_ACCESS_KEY_ID = 'AKIAJHEF7EA3OA2K6WVQ'
-AWS_SECRET_ACCESS_KEY = 'XLCzLsjceR6gVcejTa7hAJREs2myWHyRUr9w72ZF'
+# AWS_S3_REGION_NAME = 'us-west-2'  # e.g. us-east-2
+AWS_ACCESS_KEY_ID = 'AKIAJ2YECKMVJJDDPIDA'
+AWS_SECRET_ACCESS_KEY = 'mP/Du4wGjmwS359kG6DIDWDKWdsA1+Rxdtv2M0hf'
 
 # Tell django-storages the domain to use to refer to static files.
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # AWS_S3_CUSTOM_DOMAIN = 's3-us-west-2.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
 
 STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
 # Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
 # you run `collectstatic`).
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3Boto3Storage'
 
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
@@ -141,4 +142,5 @@ STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
