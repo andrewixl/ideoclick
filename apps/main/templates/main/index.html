@@ -129,7 +129,8 @@
             <h2 align="left" class="adjust">Some Companies We Work With</h2>
             <p class="lead adjust" align="left"></p>
             {%for client in client%}
-            <div class="cl1"><img src="media/{{client.client_image}}" alt=""></div>
+            <!-- <div class="cl1"><img src="media/{{client.client_image}}" alt=""></div> -->
+            <div class="cl1"><img src="https://ideoclick.s3.amazonaws.com/media/{{client.client_image}}" alt=""></div>
             {%endfor%}
             <a href="/clients"><div class="cl1"><img src="{% static 'main/img/viewall.png' %}" alt="View All"></div></a>
           </div>
