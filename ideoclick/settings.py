@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AWS_STORAGE_BUCKET_NAME = 'ideoclick'
-# AWS_S3_REGION_NAME = 'us-west-2'  # e.g. us-east-2
+AWS_S3_REGION_NAME = 'us-west-2'  # e.g. us-east-2
 AWS_ACCESS_KEY_ID = 'AKIAJHEF7EA3OA2K6WVQ'
 AWS_SECRET_ACCESS_KEY = 'XLCzLsjceR6gVcejTa7hAJREs2myWHyRUr9w72ZF'
 
