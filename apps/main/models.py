@@ -14,3 +14,17 @@ class Client(models.Model):
 
     def __str__(self):
         return self.client_name + " - " + self.client_type
+
+class Employee(models.Model):
+    employee_name = models.CharField(_("Employee Name"), max_length=255)
+    employee_title = models.CharField(_("Employee Title"), max_length=255)
+    employee_image = models.ImageField(_("Image"), upload_to='media/employees/', default='media/None/no-img.jpg')
+    employee_type = models.CharField(max_length=256, choices=[('operations', 'Operations'), ('catalog', 'Catalog'), ('account_management', 'Account Management'),
+    ('development', 'Development'), ('marketing', 'Marketing'), ('support', 'Support'),])
+
+    class Meta:
+        verbose_name = _("Employee")
+        verbose_name_plural = _("Employees")
+
+    def __str__(self):
+        return self.employee_name + " - " + self.employee_type

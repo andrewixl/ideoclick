@@ -9,7 +9,15 @@ def index(request):
     return render(request, 'main/index.html', context)
 
 def team(request):
-    return render(request, 'main/team.html')
+    operations = Client.objects.filter(employee_type = "operations").all()
+    catalog = Client.objects.filter(employee_type = "catalog").all()
+    catalog = Client.objects.filter(employee_type = "catalog").all()
+    catalog = Client.objects.filter(employee_type = "catalog").all()
+    context = {
+        "operations" : operations,  
+        "catalog" : catalog,
+    }
+    return render(request, 'main/team.html', context)
 
 def clients(request):
     clients = Client.objects.all().order_by('client_name')
