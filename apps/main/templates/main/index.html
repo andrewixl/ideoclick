@@ -8,6 +8,7 @@
 
     <title>Ideoclick, Inc.</title>
     {% load staticfiles %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/favicon.ico' %}"/>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'main/scrollingnavbar/vendor/bootstrap/css/bootstrap.min.css' %}">
     <!-- Custom styles for this template -->
@@ -43,6 +44,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://ideoclick.net/Login">Client Login</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -55,7 +59,7 @@
         </div>
         <div class="hright">
           <h1>Welcome to Ideoclick</h1>
-          <p class="lead">Get a Free Quote on Our Services</p>
+          <p class="lead">Leverage the Industry-Leading Experience of the Ideoclick Team! <br> Get a Free Quote on Our Services</p>
           <a class="nav-link js-scroll-trigger" href="#services"><button type="button" class="btn btn-lg btn-default">Request Now</button></a>
 
         </div>
@@ -76,50 +80,58 @@
       </div>
     </section>
 
+
+
+
+
     <section id="services" class="bg-light">
-      <div class="container">
+      <div class="container marketing">
+        <div class="col-lg-8 mx-auto">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
             <h2>Services</h2>
             <p class="lead">Ideoclick provides tools and services that accelerate the digital path-to-purchase.</p>
-            <div class="toplayer">
-              <a href="/fulfillment"><div class="section1" align="center">
+        </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-4" align="center">
+              <a href="/fulfillment">
                 <img src="{% static 'main/img/services/fulfillment.png' %}" alt="Ideoclick Lightbulb" height="67px">
                 <h5>Fulfillment & Retail Services</h5>
                 <h6>Expert Team to Optimize your Amazon Retail and FBA Businesses</h6>
-              </div></a>
-              <a href="/subscriptions"><div class="section2" align="center">
+              </a>
+            </div>
+            <div class="col-lg-4" align = "center">
+              <a href="/marketing">
                 <img src="{% static 'main/img/services/subscription.png' %}" alt="Ideoclick Lightbulb" height="67px">
                 <h5>Amazon Marketing Services</h5>
                 <h6>AMS, AAP, and AMG</h6>
-              </div></a>
-              <a href="/estoremonetization"><div class="section3" align="center">
+              </a>
+            </div>
+            <div class="col-lg-4" align = "center">
+              <a href="/estoremonetization">
                 <img src="{% static 'main/img/services/estore.png' %}" alt="Ideoclick Lightbulb" height="67px">
                 <h5>Consulting Services</h5>
-                <h6></h6>
-              </div></a>
+                <h6>Our Consulting Services help accelerate your journey. We guide you from strategy to implementation.</h6>
+              </a>
             </div>
-            <div class="bottomlayer">
-              <!-- <a href="/demanddriver"><div class="section1" align="center">
-                <img src="{% static 'main/img/services/demanddriver.png' %}" alt="Ideoclick Lightbulb" height="67px">
-                <h5>Demand Driver™</h5>
-                <h6>Search & Personalization Optimizer</h6>
-              </div></a> -->
-              <a href="/itemmonitor"><div class="section2" align="center">
+
+            <div class="col-lg-4" align="center">
+              <a href="/itemmonitor">
                 <img src="{% static 'main/img/services/itemmonitor.png' %}" alt="Ideoclick Lightbulb" height="67px">
                 <h5>Item Monitor</h5>
                 <h6>Ensure Data Quality, In-Stock Rates and Item Performance</h6>
-              </div></a>
-              <a href="/contentmanagement"><div class="section3" align="center">
+              </a>
+            </div>
+            <div class="col-lg-4" align = "center">
+              <a href="/contentdevelopment">
                 <img src="{% static 'main/img/services/contentmanagement.png' %}" alt="Ideoclick Lightbulb" height="67px">
                 <h5>Content Development</h5>
-                <h6><strong>Amazon SEO Writing:<<strong></strong>></h6>
-                <h6>Bellet Points, Titles, Descriptions, A+ Content, and Brand Stores</h6>
-              </div></a>
+                <h6><strong>Amazon SEO Writing:</strong></h6>
+                <h6>Bullet Points, Titles, Descriptions, A+ Content, and Brand Stores</h6>
+              </a>
             </div>
           </div>
+          </div>
         </div>
-      </div>
     </section>
 
     <section id="clients">
@@ -129,7 +141,6 @@
             <h2 align="left" class="adjust">Some Companies We Work With</h2>
             <p class="lead adjust" align="left"></p>
             {%for client in client%}
-            <!-- <div class="cl1"><img src="media/{{client.client_image}}" alt=""></div> -->
             <div class="cl1"><img src="https://ideoclick.s3.amazonaws.com/media/{{client.client_image}}" alt=""></div>
             {%endfor%}
             <a href="/clients"><div class="cl1"><img src="{% static 'main/img/viewall.png' %}" alt="View All"></div></a>

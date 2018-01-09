@@ -8,6 +8,7 @@
 
     <title>Ideoclick, Inc.</title>
     {% load staticfiles %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/favicon.ico' %}"/>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'main/scrollingnavbar/vendor/bootstrap/css/bootstrap.min.css' %}">
     <!-- Custom styles for this template -->
@@ -94,22 +95,14 @@
         <div class="row">
           <h1>Operations</h1>
         </div>
-      <div class="row">
+      <div class="row justify-content-center">
+        {%for operations in operations%}
         <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/durellherman.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Durell Herman</h2>
-          <p>Operations</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/brandonbuiles.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Brandon Builes</h2>
-          <p>Operations</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Jonathan Sanayebakhsherad</h2>
-          <p>Operations</p>
-        </div><!-- /.col-lg-4 -->
+          <img class="rounded-circle" src="https://ideoclick.s3.amazonaws.com/media/{{operations.employee_image}}" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{operations.employee_name}}</h2>
+          <p>{{operations.employee_title}}</p>
+        </div>
+        {%endfor%}
       </div><!-- /.row -->
       </div>
     </section>
@@ -120,55 +113,15 @@
         <div class="row">
           <h1>Catalog</h1>
         </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/jessicamohr.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Jessica Mohr</h2>
-          <p>Catalog Managed Services</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Tiffany Pedersen</h2>
-          <p>Catalog</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/michaelmaloy.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Michael Maloy</h2>
-          <p>Catalog</p>
-        </div>
+      <div class="row justify-content-center">
 
-      <div class="row">
+        {%for catalog in catalog%}
         <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Lynn Rand</h2>
-          <p>Catalog</p>
+          <img class="rounded-circle" src="https://ideoclick.s3.amazonaws.com/media/{{catalog.employee_image}}" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{catalog.employee_name}}</h2>
+          <p>{{catalog.employee_title}}</p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Katie Morris</h2>
-          <p>Catalog</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Joan Moyer</h2>
-          <p>Catalog</p>
-        </div><!-- /.col-lg-4 -->
-
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/cristinabarr.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Cristina Barr</h2>
-          <p>Catalog</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/chellehammer.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Chelle Hammer</h2>
-          <p>Catalog</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/allisonhiccox.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Allison Hiccox</h2>
-          <p>Catalog</p>
-        </div><!-- /.col-lg-4 -->
+        {%endfor%}
       </div><!-- /.row -->
       </div>
     </section>
@@ -180,21 +133,14 @@
           <h1>Account Management</h1>
         </div>
       <div class="row">
+
+        {%for account_management in account_management%}
         <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Michelle Brown</h2>
-          <p>MPG Account Manager</p>
+          <img class="rounded-circle" src="https://ideoclick.s3.amazonaws.com/media/{{account_management.employee_image}}" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{account_management.employee_name}}</h2>
+          <p>{{account_management.employee_title}}</p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Michelle Baron</h2>
-          <p>Account Manager</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/bethanybowlby.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Bethany Bowlby</h2>
-          <p>Account Manager</p>
-        </div><!-- /.col-lg-4 -->
+        {%endfor%}
       </div><!-- /.row -->
       </div>
     </section>
@@ -206,16 +152,13 @@
           <h1>Development</h1>
         </div>
         <div class="row justify-content-center">
+          {%for development in development%}
           <div class="col-lg-4">
-            <img class="rounded-circle" src="{% static 'main/img/team/leadership/jessewright.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-            <h2>Jesse Wright</h2>
-            <p>Software Developer</p>
+            <img class="rounded-circle" src="https://ideoclick.s3.amazonaws.com/media/{{development.employee_image}}" alt="Generic placeholder image" width="140" height="140">
+            <h2>{{development.employee_name}}</h2>
+            <p>{{development.employee_title}}</p>
           </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="{% static 'main/img/team/leadership/yichiang.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-            <h2>Yi Chiang</h2>
-            <p>Software Engineer</p>
-          </div><!-- /.col-lg-4 -->
+          {%endfor%}
         </div><!-- /.row -->
       </div>
     </section>
@@ -227,11 +170,13 @@
           <h1>Marketing</h1>
         </div>
         <div class="row justify-content-center">
+          {%for marketing in marketing%}
           <div class="col-lg-4">
-            <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-            <h2>Nadia Flusche</h2>
-            <p>Marketing</p>
+            <img class="rounded-circle" src="https://ideoclick.s3.amazonaws.com/media/{{marketing.employee_image}}" alt="Generic placeholder image" width="140" height="140">
+            <h2>{{marketing.employee_name}}</h2>
+            <p>{{marketing.employee_title}}</p>
           </div><!-- /.col-lg-4 -->
+          {%endfor%}
         </div><!-- /.row -->
       </div>
     </section>
@@ -242,40 +187,14 @@
         <div class="row">
           <h1>Support</h1>
         </div>
-      <div class="row">
+      <div class="row justify-content-center">
+        {%for support in support%}
         <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/juliefarsje.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Julie Farsje</h2>
-          <p>Client Experience / Office Manager</p>
+          <img class="rounded-circle" src="https://ideoclick.s3.amazonaws.com/media/{{support.employee_image}}" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{support.employee_name}}</h2>
+          <p>{{support.employee_title}}</p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Tammie Tsujikawa</h2>
-          <p>Accounting</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Paul Boyer</h2>
-          <p>Legal</p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Alisha Knaff</h2>
-          <p>Copy Writer</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Breka Blakeslee</h2>
-          <p>Copy Writer</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="{% static 'main/img/team/leadership/noimage.jpg' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Christine Smith</h2>
-          <p>Copy Writer</p>
-        </div><!-- /.col-lg-4 -->
+        {%endfor%}
       </div><!-- /.row -->
       </div>
     </section>
