@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^demanddriver$', views.demanddriver),
     url(r'^itemmonitor$', views.itemmonitor),
     url(r'^contentdevelopment$', views.contentdevelopment),
+    url(r'^press$', views.press),
 ]

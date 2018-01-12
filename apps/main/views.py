@@ -49,3 +49,6 @@ def itemmonitor(request):
 
 def contentdevelopment(request):
     return render(request, 'main/services/contentdevelopment.html')
+
+def press(request):
+    return render(request, 'main/press.html')

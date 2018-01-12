@@ -10,7 +10,7 @@
     {% load staticfiles %}
     <link rel="shortcut icon" type="image/png" href="{% static 'main/img/favicon.ico' %}"/>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'main/scrollingnavbar/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/scrollingnavbar/vendor/bootstrap/css/bootstrap.css' %}">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{% static 'main/scrollingnavbar/css/scrolling-nav.css' %}">
     <!-- Template Main Style Sheet -->
@@ -59,8 +59,8 @@
         </div>
         <div class="hright">
           <h1>Welcome to Ideoclick</h1>
-          <p class="lead">Leverage the Industry-Leading Experience of the Ideoclick Team! <br> Get a Free Quote on Our Services</p>
-          <a class="nav-link js-scroll-trigger" href="#services"><button type="button" class="btn btn-lg btn-default">Request Now</button></a>
+          <p class="lead"><strong>Leverage the Industry-Leading Experience of the Ideoclick Team! <br>  Get a Free Quote on Our Services </strong></p>
+          <a class="nav-link js-scroll-trigger" href="#"><button type="button" class="btn btn-lg btn-default">Request Now</button></a>
 
         </div>
       </div>
@@ -79,10 +79,6 @@
         </div>
       </div>
     </section>
-
-
-
-
 
     <section id="services" class="bg-light">
       <div class="container marketing">
@@ -149,7 +145,6 @@
       </div>
     </section>
 
-
     <section id="partners">
       <div class="container">
         <div class="row">
@@ -194,7 +189,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Ideoclick, Inc. 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Ideoclick, Inc. 2017 &nbsp;&nbsp;&nbsp;&nbsp; <a href="/press" style="color:white">Press</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/pages/IdeoClick/194806000542478" target="_blank"><img src="{% static 'main/img/social/facebook-logo-fix.svg' %}" alt="None" style="max-height: 30px"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/#!/IdeoClick" target="_blank"><img src="{% static 'main/img/social/twitter-logo-silhouette.svg' %}" alt="None" style="max-height: 30px">  </p></a>
       </div>
       <!-- /.container -->
     </footer>
