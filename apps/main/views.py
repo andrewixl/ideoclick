@@ -52,3 +52,6 @@ def contentdevelopment(request):
 
 def press(request):
     return render(request, 'main/press.html')
+
+def quote(request):
+    return render(request, 'main/quote.html')

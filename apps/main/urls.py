@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^itemmonitor$', views.itemmonitor),
     url(r'^contentdevelopment$', views.contentdevelopment),
     url(r'^press$', views.press),
+    url(r'^quote$', views.quote),
 ]
